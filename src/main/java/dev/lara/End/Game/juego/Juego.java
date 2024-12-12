@@ -118,7 +118,7 @@ public class Juego {
             UsuarioDTO usuario = new UsuarioDTO(0, nombre, correo, null, password);
             usuario.setRolNombre(Constants.ROL_USER);
             currentUser = serviceManager.registerUser(usuario);
-            scanner.close();
+            
 
             if (currentUser != null) {
                 System.out.println(Constants.MENSAJE_REGISTRO_EXITOSO);
@@ -168,7 +168,6 @@ public class Juego {
                 historia = historias.stream().findFirst().orElse(null);
 
             } else {
-                motrarMensajeBienvenida();
                 historia = historias.stream().filter(h -> h.getIdHistoria() == progreso.getIdHistoria()).findFirst()
                         .orElse(null);
             }
@@ -183,12 +182,16 @@ public class Juego {
             }
 
         } while (opciones.size() > 0);
-
+        threadSleep();
         gestionarFinPartida();
     }
 
-    private void motrarMensajeBienvenida() {
-        System.out.println(Constants.MENSAJE_BIENVENIDA_PARTIDA);
+    private void threadSleep() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @SuppressWarnings("resource")
@@ -243,9 +246,17 @@ public class Juego {
             }
             progreso = serviceManager.guardarPartida(progreso);
 
+
+            crearEspacioBlanco();
         } catch (Exception e) {
             System.out.println(Constants.MENSAJE_ERROR_ELEGIR_OPCION);
             elegirOpcion();
+        }
+    }
+
+    private void crearEspacioBlanco() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("");
         }
     }
 }

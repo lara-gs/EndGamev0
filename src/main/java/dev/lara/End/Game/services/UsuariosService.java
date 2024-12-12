@@ -39,7 +39,7 @@ public class UsuariosService {
 
     
         RolDTO rolDTO = new RolDTO(usuarioGuardado.getRol());
-        UsuarioDTO usuarioDTO = new UsuarioDTO(0, usuarioGuardado.getNombreUsuario(), usuarioGuardado.getCorreo(),
+        UsuarioDTO usuarioDTO = new UsuarioDTO(usuarioGuardado.getIdUsuario(), usuarioGuardado.getNombreUsuario(), usuarioGuardado.getCorreo(),
                 rolDTO, password);
         return usuarioDTO;
     }
