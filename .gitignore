@@ -1,0 +1,17 @@
+# Archivos y carpetas generados automáticamente por Maven
+/target/
+
+# Archivos del entorno
+*.log
+*.tmp
+
+# Configuración de IDEs
+/.idea/
+/*.iml
+/.vscode/
+/*.class
+
+# Archivos relacionados con el wrapper de Maven
+.mvn/
+mvnw.cmd
+mvnw
