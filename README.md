@@ -1,6 +1,7 @@
 # EndGame
 
-**EndGame** es un juego de historia interactiva ambientado en el año 2612. Este proyecto es una crítica social al capitalismo que permite a los jugadores tomar decisiones que afectan directamente el desarrollo de la trama.
+**EndGame** es la primera historia de un juego de historias interactivas. Ambientado en el año 2612. Este proyecto es una crítica social al capitalismo que permite a los jugadores tomar decisiones que afectan directamente el desarrollo de la trama.
+
 
 ### Sobre el juego
 
