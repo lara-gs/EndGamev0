@@ -74,7 +74,7 @@ public class Juego {
             String correo = scanner.nextLine();
             System.out.println(Constants.MENSAJE_INTRODUCIR_CONTRASENA);
             String password = scanner.nextLine();
-            //
+            
             LoginRequest loginRequest = new LoginRequest(correo, password);
             LoginResponse loginResponse = serviceManager.login(loginRequest);
 

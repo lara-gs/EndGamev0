@@ -72,7 +72,7 @@ class JuegoTest {
         mockOpciones = new ArrayList<>();
         mockOpciones.add(new OpcionesDTO(1, 1, 2, 1, 2, "Opcion 1", false, 0));
 
-        // Configure ServiceManager mock
+        
         when(serviceManager.login(any(LoginRequest.class))).thenReturn(new LoginResponse("Login exitoso", "hola@hola.com", mockUser));
         when(serviceManager.cargarPartida(mockUser.getIdUsuario())).thenReturn(mockProgreso);
         when(serviceManager.cargarHistorias()).thenReturn(mockHistorias);
@@ -81,7 +81,7 @@ class JuegoTest {
 
     @Test
     void testIniciarSesion_SuccessfulLogin() {
-        // Simulate user input for login
+        
         LoginRequest loginRequest = new LoginRequest("test@example.com", "password");
         LoginResponse loginResponse = serviceManager.login(loginRequest);
 
